@@ -35,10 +35,10 @@ defaults
 
 frontend lb-frontend
         bind *:80
-        bind *:443 ssl crt /etc/letsencrypt/live/www.principie.tech/my_www_pem.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.yamal.tech/combi.pem
         mode http
         default_backend lb-backend
 backend lb-backend
         balance roundrobin
-        server web-01 54.204.241.214:80 check
-        server web-02 _:80 check
+        server web-01 54.86.66.198:80 check
+        server web-02 18.212.48.136:80 check
